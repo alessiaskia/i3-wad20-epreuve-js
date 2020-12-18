@@ -1,6 +1,10 @@
 @import "@fortawesome/fontawesome-free/css/all.css";
 @import "~bootstrap/scss/bootstrap";
 
+//variables
+$primary-clear: rgb(163, 196, 223);
+$primary-blue: rgb(33, 33, 233);
+
 * {
   box-sizing: border-box;
 }
@@ -9,4 +13,49 @@ body {
   padding: 0;
   margin: 0;
   min-height: 100%;
+  background-color: $primary-clear;
+  font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.card {
+  width: 380px;
+  border: none;
+  background-color: white;
+  justify-content: center;
+  padding: 10px;
+  margin: 20px;
+}
+
+.card:hover {
+  border: 1px solid $primary-blue;
+}
+
+h1,
+header,
+footer,
+button {
+  margin: 50px;
+}
+
+h1,
+h3,
+h5 {
+  color: $primary-blue;
+}
+
+h5 {
+  font-size: 1.5rem;
 }
