@@ -44,7 +44,7 @@ for (const vaccine of vaccines) {
   }
   card += `<li class="list-group-item">
             <label for="quantity">Quantity : </label>
-            <input type="number" id="quantity" name="quantity" min="1" max"${vaccine.quantity}">
+            <input type="number" id="quantity" name="quantity" min="1" max="${vaccine.quantity}">
             </li>
             </ul>
         <input type="submit" value="Réserver" class="btn-book btn-primary btn-sm">
@@ -100,3 +100,6 @@ document.body.addEventListener('click', (e) => {
     app.innerHTML = '<h2>La commande a bien été enregistrée</h2>';
   }
 });
+
+window.console.log('coucou');
+console.log('coucou');

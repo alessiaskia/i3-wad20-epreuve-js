@@ -35,16 +35,43 @@ Les réponses peuvent être subjectives si il y a le signe **(s)** à la fin de 
 
 Vous pouvez répondre à même ce document ou dans un fichier à part.
 
-- Qu'est-ce que JavaScript vanilla ?
-- Qu'est-ce qu'AJAX ?
-- Pourquoi JavaScript est parfois mal-aimé des devs ? **(s)**
+**réponse donnée directement après chaque question, en jaune**
+
+- Qu'est-ce que JavaScript vanilla ? 
+`Javascript vanilla est le Javascript pur, sans l'utilisation d'aucun framework (comme React ou Vue.js) ni librairie (comme JQuery). Il est fort récommandé d'apprendre à bien maitriser les bases de JS avant de se lancer dans l'utilisation de frameworks et/ou librairies. Il existe meme un site web (http://vanilla-js.com/) qui cible ironiquement les devs qui ne savent pas développer en JS vanilla.`
+
+- Qu'est-ce qu'AJAX ? 
+`Ajax est l'acronyme d'asynchronous JavaScript and XML (= JavaScript et XML asynchrones). Il s'agit d'une méthode qui permet d'envoyer des requetes au serveur web et afficher/modifier la page coté client sans devoir à chaque fois mettre la jour la page entière.`
+
+- Pourquoi JavaScript est parfois mal-aimé des devs ? **(s)** 
+`Plusieurs raisons :`
+1. language pas typé. Ce n'est pas tout à fait vrai, car Typescript permet le typage, mais souvent les devs habitués à des languages fortement typés trouvent très chaotique le fait de ne pas immédiatement assigner des types à leurs variables. Personnellement, j'adore pouvoir me passer du typage !
+2. les classes ne sont pas utilisées. Introduite que dans la dernière version de JS, les classes sont quasiment pas utilisées, ce qui encore une fois ne plait pas aux devs qui aiment l'orienté-objet.
+3. confusion avec la portée ("scope") de la variable, que dans d'autres languages est plus facile à comprendre (je suis d'accord)
+4. parce qu'il existent mille types de valeurs nulles : undefined, null, NaN, et on n'en avait pas vraiment besoin car c'était déjà assez compliqué avec null.
+5. on ne peut pas s'en passer pour faire du front-end, ce qui cause de la frustration chez ceux qui n'arrivent pas à le maitriser correctement !
+6. l'aspect final de notre application dépend trop fort du navigateur utilisé et cela est frustrant aussi.
+  
 - Y a-t-il des types en JavaScript ? Si oui, lesquels ?
+`Oui il existent des types : string , number , undefined , null , boolean, symbol et object. Beaucoup de personnes se trompent pensant que Array est aussi un type, alors que ceci n'est qu'un objet lui-meme.`
+
 - Est-ce que SASS est un langage qui est interprété par les navigateurs ?
+`Non, le navigateur ne peut interpreter rien d'autre que du HTML, CSS et Javascript. Le code écrit en SASS doit d’abord etre converti en CSS avant que le système ne livre le code source.`
+
 - Pourquoi peut-on dire que JavaScript est un langage "multi-paradigmes" ? **(s)**
+`Parce que malgré sa forte tendance fonctionnelle, on peut faire de l'orienté-objet avec Javascript grace aux classes introduite avec la version ES6. Ceci dit, JS donne le mieux de soit en fonctionnelle grace aux fonctions d'ordre supérieur (comme les callbacks).`
+  
 - En JS, une fonction peut-elle retourner une fonction ?
+`Oui, car en Javascript les fonctions sont considérées des "citoyens de première classe", càd elle peuvent etre stockées dans des variables et traitées comme telles. Donc une fonction peut retourner une variable, qui est elle-meme une fonction.`
+
 - Est-ce que `alert` existe en Node.JS ?
+`Non parce que c'est un element lié à l'objet window, qui n'existe pas dans Node.js. Donc 'alert' ne peut pas etre executé en dehors du contexte d'une page web.`
+
 - Est-ce que `window.console.log === console.log` dans le navigateur ?
+`Oui. En effet, dans un navigateur l'objet "window" est une variable global. Par contre, il ne l'est pas dans d'autres environnements comem Node.js. On peut utiliser window.console pour verifier si la console est disponible (ce qui n'est pas possible par exemple dans les navigateur pour mobile).`
+
 - Quel est votre aspect préféré de JavaScript ? **(s)**
+`Personnellement je n'aime pas trop les languages typés comme C#, parce qu'ils sont très difficiles à apprendre et coder dans un premier temps et il faut parser tout le temps - avec JS, on "skippe" cette partie. Mais mon aspect préféré est certainement la possibilité d'intéragir directement avec le browser sans devoir passer par des interface compliquées et par un serveur. J'aime cette option d'autant plus depuis que je connais le LocalStorage, qui permet de sauvegarder les données clients, meme si de forme limitée.`
 
 ## Épreuve pratique sur 80pts
 Vous êtes codeuse/codeur JavaScript dans une clinique du centre-ville.
