@@ -44,10 +44,10 @@ for (const vaccine of vaccines) {
   }
   card += `<li class="list-group-item">
             <label for="quantity">Quantity : </label>
-            <input type="number" id="quantity" name="quantity">
+            <input type="number" id="quantity" name="quantity" min="1" max"${vaccine.quantity}">
             </li>
             </ul>
-        <button class="btn-book btn-primary btn-sm">Réserver </button>
+        <input type="submit" value="Réserver" class="btn-book btn-primary btn-sm">
     </div>
     </div>`;
   container += card;
@@ -77,21 +77,23 @@ document.body.addEventListener('click', (e) => {
       }
     }
     // actions when user clicks on "réserver"
-    //   } else if (e.target.matches('.btn-book')) {
+  } else if (e.target.matches('.btn-book')) {
+    const selectedVaccine = e.target.parentNode.parentNode;
+    const vaccine = vaccines[selectedVaccine.id];
+    const chosenVaccine = vaccine.name;
+    const wantedQuantity = e.target.parentNode.querySelector('#quantity').value;
+    const bookingArea = document.querySelector('.booking-area');
+    const inputArea = e.target.parentNode.children[1].children[6];
+
+    // put selected vaccine + desired quantity in footer
+    bookingArea.innerHTML += `<p>${chosenVaccine} - quantité : ${wantedQuantity}`;
+
+    // hide input area
+    inputArea.classList.add('invisible');
+
+    // disable booking button
+    e.target.disabled = true;
+    //   } else if (e.target.matches('.btn-order')) {
     //     console.log(e.target);
-    //     // select vaccine
-    //     const selectedVaccine = e.target.parentNode.parentNode;
-    //     console.log(selectedVaccine);
-    //     const vaccine = vaccines[selectedVaccine.id];
-    //     console.log(vaccine);
-    //     // put selected vaccine + desired quantity in footer
-    //     const chosenVaccine = vaccine.name;
-    //     const quantity = document.getElementById('quantity').currentValue;
-    //     console.log(chosenVaccine);
-    //     console.log(quantity);
-    //     const bookingArea = document.querySelector('.booking-area');
-    //     const booking = ` ${chosenVaccine} - quantité : ${quantity}`;
-    //     console.log(booking);
-    //     bookingArea.append(booking);
   }
 });
