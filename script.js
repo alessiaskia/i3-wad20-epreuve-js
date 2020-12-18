@@ -93,7 +93,10 @@ document.body.addEventListener('click', (e) => {
 
     // disable booking button
     e.target.disabled = true;
-    //   } else if (e.target.matches('.btn-order')) {
-    //     console.log(e.target);
+
+    // confirm booking
+  } else if (e.target.matches('.btn-order')) {
+    console.log(e.target);
+    app.innerHTML = '<h2>La commande a bien été enregistrée</h2>';
   }
 });
